@@ -1,0 +1,57 @@
+@extends('main.layout')
+@section('body')
+<main class="app-main">
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6"><h3 class="mb-0">Treeview Plugin</h3></div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-end">
+                        <li class="breadcrumb-item"><a href="#">Docs</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Treeview Plugin</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-content">
+        <div class="container-fluid">
+            <p>
+                The Treeview plugin converts a nested list into a tree view where sub menus can be
+                expanded.
+            </p>
+            <h5 id="usage">Usage</h5>
+            <p>This plugin can be used as the data api.</p>
+            <p><strong>Data API</strong></p>
+            <p>
+                Add <code>data-lte-toggle=&quot;treeview&quot;</code> to any ul or ol element to
+                activate the plugin.
+            </p>
+            <pre
+                class="astro-code dark-plus"
+                style="background-color: #1e1e1e; color: #d4d4d4; overflow-x: auto"
+                tabindex="0"
+                data-language="html"
+            ><code><span class="line"><span style="color:#808080">&lt;</span><span style="color:#569CD6">ul</span><span style="color:#9CDCFE"> data-lte-toggle</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;treeview&quot;</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">  &lt;</span><span style="color:#569CD6">li</span><span style="color:#808080">&gt;&lt;</span><span style="color:#569CD6">a</span><span style="color:#9CDCFE"> href</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;#&quot;</span><span style="color:#808080">&gt;</span><span style="color:#D4D4D4">One Level</span><span style="color:#808080">&lt;/</span><span style="color:#569CD6">a</span><span style="color:#808080">&gt;&lt;/</span><span style="color:#569CD6">li</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">  &lt;</span><span style="color:#569CD6">li</span><span style="color:#9CDCFE"> class</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;nav-item menu-open&quot;</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">    &lt;</span><span style="color:#569CD6">a</span><span style="color:#9CDCFE"> class</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;nav-link&quot;</span><span style="color:#9CDCFE"> href</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;#&quot;</span><span style="color:#808080">&gt;</span><span style="color:#D4D4D4">Multilevel</span><span style="color:#808080">&lt;/</span><span style="color:#569CD6">a</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">    &lt;</span><span style="color:#569CD6">ul</span><span style="color:#9CDCFE"> class</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;nav-treeview&quot;</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">      &lt;</span><span style="color:#569CD6">li</span><span style="color:#808080">&gt;&lt;</span><span style="color:#569CD6">a</span><span style="color:#9CDCFE"> href</span><span style="color:#D4D4D4">=</span><span style="color:#CE9178">&quot;#&quot;</span><span style="color:#808080">&gt;</span><span style="color:#D4D4D4">Level 2</span><span style="color:#808080">&lt;/</span><span style="color:#569CD6">a</span><span style="color:#808080">&gt;&lt;/</span><span style="color:#569CD6">li</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">    &lt;/</span><span style="color:#569CD6">ul</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">  &lt;/</span><span style="color:#569CD6">li</span><span style="color:#808080">&gt;</span></span>
+<span class="line"><span style="color:#808080">&lt;/</span><span style="color:#569CD6">ul</span><span style="color:#808080">&gt;</span></span></code></pre>
+            <h5 id="example">Example</h5>
+            <ul data-lte-toggle="treeview">
+                <li><a href="#">One Level</a></li>
+                <li class="nav-item menu-open">
+                    <a class="nav-link" href="#"><p>Multilevel</p></a>
+                    <ul class="nav-treeview">
+                        <li><a href="#">Level 2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+@endsection
